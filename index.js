@@ -6,7 +6,7 @@ var main = async function () {
   var dailies = submissions.filter(x => x["title"].includes("Daily General Discussion")).sort(x => x["created_utc"]);
   var url = dailies[0]["url"];
   url = params.includes("old") ? url.replace("www.reddit.com", "old.reddit.com") : url
-  window.location.replace(url);
+  window.location.replace(url+params);
 }
 
 main();
